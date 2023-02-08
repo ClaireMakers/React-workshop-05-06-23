@@ -16,7 +16,6 @@ function App() {
   const [shout, setShout] = useState("Value when loading page for the first time");
   const word = "MAKERS";
 
-
   return (
     <div className="App">
       <h1>Cheerleadr</h1>
