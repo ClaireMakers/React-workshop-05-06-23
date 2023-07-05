@@ -6,7 +6,8 @@ import CheerButton from "./CheerButton"
   > React hooks - they keep track and interact with the state of a component. 
   For instance, here, our hook [shout, setShout] lets us update the value of "shout", which is held in the state of the component.
   > useState is an in-built function in React, that lets you access and update the state of a component.
-  > When the state of a component is updated, for instance, when we press our buttons, the component re-renders, i.e. re-displays on the page
+  > When the state of a component is updated, for instance, when we press our buttons, the component re-renders, 
+  i.e. re-displays on the page
   the right information from its state.
   */
 
@@ -23,11 +24,9 @@ const App = () => {
       <h1>Cheerleadr</h1>
 
       {/*The curly brackets signal that we are using JSX here - you can write
-      JavaScript code directly inside of them. .split turns word into an array,
-      then map allows us to create a button dynamically for each letter in the
-      array. For instance, this could be really useful if down the line, I
-      wanted to create some user input for the word itself, and possible storing
-  the word inside a new hook.*/}
+      JavaScript code directly inside of them. .map() allows us to create a button 
+      dynamically for each letter in the array. For instance, this could be really useful 
+      if down the line, Iwanted to create some user input for the word itself.*/}
       
       {word.map((character) => {
         return <CheerButton letter={character} setShout={setShout} />;
