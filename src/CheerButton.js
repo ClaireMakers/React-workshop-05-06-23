@@ -1,16 +1,14 @@
-//Need to know what letter to display on the button
-//We will need to have a way of updating the state on the App.js to trigger a re-render when the button is pressed
+const CheerButton = (props) => {
+  //props is an object with the key-value pairs you passed down from the parent component.
+  // Here, it's {letter: "string of letter", setShout: setShout}
+    
+  const handleClick = () => {
+    props.setShout(props.letter);
+  };
 
-const CheerButton = ( { letter, setLetter } ) => {
-
-    const handleClick = () => {
-        //changes
-        setLetter(letter);
-    };
-
-    return (
-        <button data-cy="cheerButton" onClick={handleClick}>{letter}</button>
-    );
+  return (
+    <button onClick={handleClick}>{props.letter}</button>
+  );
 }
 
 export default CheerButton;
